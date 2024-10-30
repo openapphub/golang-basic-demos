@@ -41,14 +41,14 @@ type RequestMainData struct {
 */
 
 type ResponseMainData struct {
-	RequestId string     `json:"requestId"`
-	ImageUrl  string     `json:"imageUrl"`
-	Code      int        `json:"code"`
-	Message   string     `json:"message"`
-	Data      []MainData `json:"data"`
+	RequestId       string     `json:"requestId"`
+	ImageUrl        string     `json:"imageUrl"`
+	Code            int        `json:"code"`
+	Message         string     `json:"message"`
+	CheckResultList []MainData `json:"checkResultList"`
 }
 type MainData struct {
-	ResultId  string `json:"resultId"`
-	CheckName string `json:"checkName"`
-	Result    string `json:"result"` // 0 / 1
+	ResultId   string `json:"resultId"`
+	CheckName  string `json:"checkName"`
+	ResultCode string `json:"resultCode"` // 0 / 1
 }

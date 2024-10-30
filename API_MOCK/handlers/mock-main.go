@@ -50,18 +50,18 @@ func MockMainHandle(w http.ResponseWriter, r *http.Request) {
 	mainDataList := make([]models.MainData, 4)
 	for i := 0; i < 4; i++ {
 		mainDataList[i] = models.MainData{
-			ResultId:  fake.UUID(),
-			CheckName: fake.Username(),
-			Result:    fake.RandomString([]string{"0", "1"}),
+			ResultId:   fake.UUID(),
+			CheckName:  fake.Username(),
+			ResultCode: fake.RandomString([]string{"0", "1"}),
 		}
 	}
 
 	response := models.ResponseMainData{
-		RequestId: fake.UUID(),
-		ImageUrl:  "/api/mock/image",
-		Code:      0,
-		Message:   "success",
-		Data:      mainDataList,
+		RequestId:       fake.UUID(),
+		ImageUrl:        "/api/mock/image",
+		Code:            0,
+		Message:         "success",
+		CheckResultList: mainDataList,
 	}
 
 	jsonResponse, err := json.Marshal(response)
