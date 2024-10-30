@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 	"openapphub/models"
+	"strings"
 
 	"github.com/brianvoe/gofakeit/v7"
 )
@@ -17,11 +18,13 @@ func MockScenesHandler(w http.ResponseWriter, r *http.Request) {
 		Message: "Success",
 		Data: []models.ScenesData{
 			{
-				Name:   fake.Word(),
-				Result: fake.Sentence(10),
+				// Name:   fake.Word(),
+				Name:   "1",
+				Result: strings.Replace(fake.Paragraph(2, 4, 10, "."), ". ", ".\n", -1),
 			},
 			{
-				Name:   fake.Word(),
+				// Name:   fake.Word(),
+				Name:   "2",
 				Result: fake.Sentence(10),
 			},
 		},
