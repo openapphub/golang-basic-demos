@@ -1,0 +1,11 @@
+{
+  "scenceCode": "SC12345",
+  "projectId": "PRJ67890",
+  "taskId": "TSK54321",
+  "objectType": "Building",
+  "objectId": "OBJ98765",
+  "imgBase64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...",
+  "longitude": 123.456789,
+  "latitude": 34.56789,
+  "photoTime": "2024-06-24 10:23:22"
+}
